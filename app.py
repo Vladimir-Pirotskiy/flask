@@ -38,6 +38,10 @@ def logout():
     session.pop('user',None)
     return redirect('/')
 
+@app.route('/showAddWish')
+def showAddWish():
+    return render_template('addWish.html')
+
 @app.route('/validateLogin',methods=['POST'])
 def validateLogin():
     try:
